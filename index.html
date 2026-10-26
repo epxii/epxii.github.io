@@ -7,7 +7,7 @@
 <meta name="description" content="Epifanio Sarabia is an Austin-based web designer and digital marketer. Video, social, web design and SEO work.">
 <meta property="og:title" content="Epifanio Sarabia | Video, Web and Social">
 <meta property="og:description" content="Austin-based web designer and digital marketer. Video, social, web design and SEO work.">
-<link rel="icon" type="image/png" href="assets/img/logo.png">
+<link rel="icon" type="image/png" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -430,7 +430,7 @@ body:has(#ambient.on)::after{opacity:1}
 </section>
 
 <header id="bar">
-  <button class="me" id="home" aria-label="Home (on the desktop, replays the intro)" title="Home"><img src="assets/img/logo.png" alt="" width="34" height="34"></button>
+  <button class="me" id="home" aria-label="Home (on the desktop, replays the intro)" title="Home"><img src="logo.png" alt="" width="34" height="34"></button>
   <nav id="nav" aria-label="Work categories"></nav>
   <div class="right">
     <div class="toggle" role="group" aria-label="View">
@@ -442,7 +442,7 @@ body:has(#ambient.on)::after{opacity:1}
   </div>
 </header>
 
-<video id="ambient" src="assets/video/ambient-loop.mp4" muted loop playsinline preload="auto" aria-hidden="true"></video>
+<video id="ambient" src="ambient-loop.mp4" muted loop playsinline preload="auto" aria-hidden="true"></video>
 <main id="desk">
   <div id="icons"></div>
   <div id="list">
@@ -468,10 +468,10 @@ const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const store={get(k){try{return sessionStorage.getItem(k)}catch(e){return null}},set(k,v){try{sessionStorage.setItem(k,v)}catch(e){}}};
 
 /* Real work. Thumbnails are stand-ins until real images/video are dropped in. */
-const LOGO='assets/img/logo.png';
-const VID={yt:'assets/video/youtube-channel.mp4',shore:'assets/video/shore.mp4',glazeReel:'assets/video/glaze-reel.mp4',ktswReel:'assets/video/ktsw-reel.mp4',stagehop:'assets/video/stagehop-demo.mp4',grant:'assets/video/glaze-grant-preview.mp4',moha:'assets/video/glaze-bts-preview.mp4'};
-const GLASS=['assets/img/glass-1.webp','assets/img/glass-2.webp','assets/img/glass-3.webp'];
-const IMG={ytPoster:'assets/img/yt-poster.jpg',shorePoster:'assets/img/shore-poster.jpg',glazeReelPoster:'assets/img/glaze-reel-poster.jpg',ktswPoster:'assets/img/ktsw-poster.jpg',shPoster:'assets/img/stagehop-poster.jpg',grantPoster:'assets/img/grant-poster.jpg',mohaPoster:'assets/img/moha-poster.jpg',photo:'assets/img/epi-portrait.jpg',before:'assets/img/medicaremall-new.jpg',after:'assets/img/medicaremall-old.jpg',gfPrev:'assets/img/gradflow.jpg',gfDeck:'assets/img/gradflow-deck.jpg',social:'assets/img/glaze-reel-cover.jpg',paceCover:'assets/img/pace-cover.jpg',paceDoc:'assets/img/pace-doc.jpg'};
+const LOGO='logo.png';
+const VID={yt:'youtube-channel.mp4',shore:'shore.mp4',glazeReel:'glaze-reel.mp4',ktswReel:'ktsw-reel.mp4',stagehop:'stagehop-demo.mp4',grant:'glaze-grant-preview.mp4',moha:'glaze-bts-preview.mp4'};
+const GLASS=['glass-1.webp','glass-2.webp','glass-3.webp'];
+const IMG={ytPoster:'yt-poster.jpg',shorePoster:'shore-poster.jpg',glazeReelPoster:'glaze-reel-poster.jpg',ktswPoster:'ktsw-poster.jpg',shPoster:'stagehop-poster.jpg',grantPoster:'grant-poster.jpg',mohaPoster:'moha-poster.jpg',photo:'epi-portrait.jpg',before:'medicaremall-new.jpg',after:'medicaremall-old.jpg',gfPrev:'gradflow.jpg',gfDeck:'gradflow-deck.jpg',social:'glaze-reel-cover.jpg',paceCover:'pace-cover.jpg',paceDoc:'pace-doc.jpg'};
 const CATS=[
  {id:'video',name:'Video',pos:[25,34],rot:0,items:[
   {t:'Glaze grant proposal',d:'An interview-led video for Glaze Magazine’s grant proposal. Members of the team talk about what Glaze is, its community outreach and its work around Austin.',org:'Glaze Magazine',role:'Video production',k:'photo',img:IMG.grantPoster,preview:VID.grant},
@@ -726,7 +726,7 @@ function playExit(){
 const enter=$('#enter');
 $('#mark').src=LOGO;
 /* Background loop (black and white) */
-const LOOP_BW='assets/video/intro-loop.mp4';
+const LOOP_BW='intro-loop.mp4';
 (function buildLoop(){
   const reel=$('#reel');
   reel.innerHTML=`<video class="loop v-light" src="${LOOP_BW}" muted loop playsinline autoplay preload="auto"></video>`;
@@ -820,7 +820,7 @@ function openCat(id,from,focusTitle){
       </dl>
       ${nowPlaying()}
       <p class="contact"><a href="mailto:epsab02@gmail.com">epsab02@gmail.com</a><a href="https://www.linkedin.com/in/epifanio-sarabia-32b2181a9/" target="_blank" rel="noopener">LinkedIn</a></p>
-      <p class="contact resumes"><span>Résumé:</span><a href="resumes/Epifanio-Sarabia-Resume-Social.pdf" target="_blank" rel="noopener" download>Social and content</a><a href="resumes/Epifanio-Sarabia-Resume-Web.pdf" target="_blank" rel="noopener" download>Web and design</a></p></div></div>`;
+      <p class="contact resumes"><span>Résumé:</span><a href="Epifanio-Sarabia-Resume-Social.pdf" target="_blank" rel="noopener" download>Social and content</a><a href="Epifanio-Sarabia-Resume-Web.pdf" target="_blank" rel="noopener" download>Web and design</a></p></div></div>`;
   } else {
     $('#wcount').textContent=c.items.length+' items';
     $('#wbody').innerHTML=`<div class="grid">${c.items.map(p=>`<article class="card">${p.ba?baInline(p):p.slides?carousel(p):p.preview?`<div class="th th-photo${p.vertical?' vert':''}"><video src="${p.preview}" poster="${p.img}" autoplay muted loop playsinline preload="metadata"></video></div>`:thumb(p)}<h3>${p.t}</h3><p>${p.d}</p><div class="meta"><span>${p.org}</span><span>${p.role}</span></div>${cardActions(p,c.id)}</article>`).join('')}</div>`;
