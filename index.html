@@ -412,7 +412,7 @@ body:has(#ambient.on)::after{opacity:1}
 .folder .fcount{margin-top:-2px}.folder .fcount svg{height:8px;width:auto;color:var(--muted)}
 .folder .off{opacity:.12}
 #wtitle{display:inline-flex!important;line-height:0;vertical-align:baseline}
-#wtitle svg{height:clamp(24px,3vw,34px);width:auto;color:var(--ink)}
+#wtitle svg{height:clamp(16px,4.6vw,34px);width:auto;max-width:100%;color:var(--ink)}
 #wtitle .off,#wcount .off{opacity:.1}
 #wcount{display:inline-flex;line-height:0;margin-left:14px}
 #wcount svg{height:11px;width:auto;color:var(--muted)}
@@ -430,7 +430,7 @@ body:has(#ambient.on)::after{opacity:1}
 .scroll-th{position:relative;filter:none;background:#fff}
 .scroll-th .ba-scroll{position:absolute;inset:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
 .scroll-th img{display:block;width:100%;height:auto}
-.scroll-th .ba-tag{top:10px;font-size:11px;pointer-events:none}
+.scroll-th .ba-tag{top:auto;bottom:10px;font-size:11px;pointer-events:none}
 </style>
 <script data-goatcounter="https://epxii.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -505,7 +505,7 @@ const CATS=[
   {t:'MedicareMall.com redesign',d:'A full refresh of the agency’s main site. The old homepage felt dated and was clunky on phones, so I rebuilt it with a cleaner, more modern look, easier navigation and a layout that works just as well on mobile as on desktop. Drag the handle to compare, and scroll to see the whole page.',org:'MedicareMall',role:'Web design',k:'photo',img:IMG.before,ba:[IMG.after,IMG.before]},
   {t:'GradFlow',d:'Capstone project: a concept career management platform for students and recent graduates. Wireframes, marketing mockups and a full pitch deck covering the UI, a job-matching concept and the brand.',org:'Texas State, 2024',role:'UX, branding, pitch',k:'photo',img:IMG.gfPrev,full:IMG.gfDeck,fullLabel:'View the deck'}]},
  {id:'content',name:'SEO & Content',pos:[37.5,70],rot:0,items:[
-  {t:'Medicare page rewrites',d:'SEO rewrites of core pages across MedicareMall.com, from Medicare cards and late enrollment penalties to What is Medicare? Featured: the IRMAA guide, which explains the income-based surcharges higher earners pay on Part B and Part D. In the year since my rewrite it earned 418,369 search impressions and 1,801 clicks, with clicks up 40%.',org:'MedicareMall',role:'SEO, writing',k:'photo',img:'irmaa-page.jpg',scroll:'irmaa-page.jpg',full:'irmaa-page.jpg',fullLabel:'View the full page',url:'https://medicaremall.com/irmaa-medicare-income-related-monthly-adjustment-amounts/',cta:'Read the IRMAA guide'},
+  {t:'Medicare page rewrites',d:'SEO rewrites across MedicareMall.com. Shown: the IRMAA guide, which in the past year earned 418K impressions and 1.8K clicks, with clicks up 40%.',org:'MedicareMall',role:'SEO, writing',k:'photo',img:'irmaa-page.jpg',scroll:'irmaa-page.jpg',url:'https://medicaremall.com/irmaa-medicare-income-related-monthly-adjustment-amounts/',cta:'Read the live page'},
   {t:'Pace Center client portfolio',d:'A client portfolio for The Pace Center at Texas State, prepared with a student team for an advanced social media and analytics course.',org:'Texas State, Fall 2022',role:'Analytics, campaign content',k:'photo',img:IMG.paceCover,full:IMG.paceDoc,fullLabel:'Read the portfolio'}]},
 ];
 const ABOUT={id:'about',name:'About me',pos:[62.5,70],rot:0};
